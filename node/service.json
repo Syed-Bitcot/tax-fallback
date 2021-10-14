@@ -1,0 +1,18 @@
+{
+  "memory": 5120,
+  "ttl": 10,
+  "timeout": 10,
+  "minReplicas": 2,
+  "maxReplicas": 4,
+  "workers": 1,
+  "routes": {
+    "getFallbackTaxes": {
+      "path": "/_v/tax-fallback/:country/:provider/:postalCode",
+      "public": true
+    },
+    "downloadFallbackTaxes": {
+      "path": "/_v/tax-fallback/download-taxes/:country/:provider",
+      "public": true
+    }
+  }
+}
